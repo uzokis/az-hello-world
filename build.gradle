@@ -1,0 +1,30 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+    }
+}
+
+// PROJECT SETTINGS
+plugins {
+	id 'java'
+  id 'war'
+	id 'eclipse' //or your favorite IDE
+  id 'jetty'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+group = 'eu.fenego.azure'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'http://oss.sonatype.org/content/repositories/snapshots/'
+    }
+}
+
+// DEPENDENCIES
+dependencies {
+  compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+}
